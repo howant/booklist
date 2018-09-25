@@ -1,32 +1,30 @@
 {
-  "Book-list": {
-    "To-read": [
-      {
-        "Title": "Lead with Respect",
-        "Author": "Michael Balle & Freddy Balle"
-      },
-      {
-        "Title": "Star Shroud",
-        "Author": "Ken Lozito"
-      },
-      {
-        "Title": "The Great Gatsby",
-        "Author": "F. Scott Fitzgerald"
-      }
-    ],
-    "Reading": {
-      "Title": "Black Man",
-      "Author": "Richard Morgan"
+  "To-read": [
+    {
+      "Title": "Lead with Respect",
+      "Author": "Michael Balle & Freddy Balle"
     },
-    "Finished-reading": [
-      {
-        "Title": "Dark Eden",
-        "Author": "Chris Beckett"
-      },
-      {
-        "Title": "A Wild Sheep Chase",
-        "Author": "Haruki Murakami"
-      }
-    ]
-  }
+    {
+      "Title": "Star Shroud",
+      "Author": "Ken Lozito"
+    },
+    {
+      "Title": "The Great Gatsby",
+      "Author": "F. Scott Fitzgerald"
+    }
+  ],
+  "Reading": {
+    "Title": "Black Man",
+    "Author": "Richard Morgan"
+  },
+  "Finished-reading": [
+    {
+      "Title": "Dark Eden",
+      "Author": "Chris Beckett"
+    },
+    {
+      "Title": "A Wild Sheep Chase",
+      "Author": "Haruki Murakami"
+    }
+  ]
 }
