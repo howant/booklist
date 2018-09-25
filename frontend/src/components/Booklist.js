@@ -1,54 +1,37 @@
 import React from "react";
 
-const Booklist = () => {
+const Booklist = props => {
+  debugger;
   return (
-      <div className="App-booklist">
-        <h2>To read</h2>
-        <ul className="Books-to-read">
-          <li>
-            Lead with Respect
-            <ul>
-              <li>Michael Ballé & Freddy Ballé</li>
-            </ul>
-          </li>
-          <li>
-            Book 2
-            <ul>
-              <li>Author 1</li>
-            </ul>
-          </li>
-          <li>
-            Book 3
-            <ul>
-              <li>Author 3</li>
-            </ul>
-          </li>
-        </ul>
-        <h2>Currently reading</h2>
-        <ul className="Books-reading">
-          <li>
-            Book 1
-            <ul>
-              <li>Author 1</li>
-            </ul>
-          </li>
-        </ul>
-        <h2>Finished reading</h2>
-        <ul className="Books-finished">
-          <li>
-            Book 1
-            <ul>
-              <li>Author 1</li>
-            </ul>
-          </li>
-          <li>
-            Book 2
-            <ul>
-              <li>Author 2</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    <div className="App-booklist">
+      <h2>To read</h2>
+      <ul className="Books-to-read">
+        {props.lists["To-read"].map(book => (
+          <Book Title={book.Title} Author={book.Author} />
+        ))}
+      </ul>
+      <h2>Currently reading</h2>
+      <ul className="Books-reading">
+      <Book Title={props.lists["Reading"].Title} Author={props.lists["Reading"].Author} />
+      </ul>
+      <h2>Finished reading</h2>
+      <ul className="Books-finished">
+        {props.lists["Finished-reading"].map(book => (
+          <Book Title={book.Title} Author={book.Author} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Book = props => {
+  return (
+    <li>
+      {props.Title}
+      <ul>
+        <li>{props.Author}</li>
+      </ul>
+    </li>
   );
 };
 
