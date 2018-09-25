@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-header {
@@ -11,4 +11,12 @@
 
 .App-title {
   font-size: 1.5em;
+}
+
+.App-booklist {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px
 }
