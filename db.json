@@ -1,6 +1,6 @@
 {
-  "Book list": {
-    "To read": [
+  "Book-list": {
+    "To-read": [
       {
         "Title": "Lead with Respect",
         "Author": "Michael Balle & Freddy Balle"
@@ -18,7 +18,7 @@
       "Title": "Black Man",
       "Author": "Richard Morgan"
     },
-    "Finished reading": [
+    "Finished-reading": [
       {
         "Title": "Dark Eden",
         "Author": "Chris Beckett"
