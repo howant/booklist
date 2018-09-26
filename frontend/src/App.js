@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Booklist from "./containers/Booklist";
 import "./App.css";
 
-
 class App extends Component {
   render() {
     return (
@@ -10,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">My Book List</h1>
         </header>
-        <Booklist />
+        <Booklist requestBooks/>
       </div>
     );
   }

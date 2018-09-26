@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Booklist extends Component {
+  componentDidMount() {
+    this.props.requestBooks();
+  }
+
   render() {
     return (
       <div className="App-booklist">
