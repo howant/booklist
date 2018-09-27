@@ -14,13 +14,11 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">My Book List</h1>
           </header>
-          <Route path={PREFIX_PATH}>
-            <Switch>
-              <Route exact path="/" component={Booklist} />
-              <Route path="/description" component={Description} />
-              <Route path="/" component={Booklist} />
-            </Switch>
-          </Route>
+          <Switch>
+            <Route exact path="/" component={Booklist} />
+            <Route path={`${PREFIX_PATH}/description`} component={Description} />
+            <Route path="/" component={Booklist} />
+          </Switch>
         </div>
       </Router>
     );
