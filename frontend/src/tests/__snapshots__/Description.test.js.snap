@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  className="App-description"
+>
   <h2>
-    Description goes here
+    Title: 
+    Book One
+  </h2>
+  <h2>
+    Synopsis: 
+    synopsis goes here...
   </h2>
 </div>
 `;

@@ -1,7 +1,11 @@
 const initialState = {
   "To-read": [],
   Reading: undefined,
-  "Finished-reading": []
+  "Finished-reading": [],
+  selectedBook: {
+    title: "Book One",
+    synopsis: "synopsis goes here..."
+  }
 };
 
 const bookReducer = (state = initialState, action) => {
