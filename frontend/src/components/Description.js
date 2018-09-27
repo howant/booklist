@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Description extends Component {
+  componentDidMount() {
+    this.props.requestSelectedBook();
+  }
 
   render() {
     return (

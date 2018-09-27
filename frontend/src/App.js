@@ -4,6 +4,8 @@ import Description from "./containers/Description";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+const PREFIX_PATH='/booklist';
+
 class App extends Component {
   render() {
     return (
@@ -12,11 +14,13 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">My Book List</h1>
           </header>
-          <Switch>
-            <Route exact path="/" component={Booklist} />
-            <Route path="/description" component={Description} />
-            <Route path="/" component={Booklist} />
-          </Switch>
+          <Route path={PREFIX_PATH}>
+            <Switch>
+              <Route exact path="/" component={Booklist} />
+              <Route path="/description" component={Description} />
+              <Route path="/" component={Booklist} />
+            </Switch>
+          </Route>
         </div>
       </Router>
     );
