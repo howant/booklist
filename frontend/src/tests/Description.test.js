@@ -4,10 +4,13 @@ import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   const lists = {
-    "Selected-book": "Book One"
+    selectedBook: {
+      title: "Book One",
+      synopsis: "synopsis goes here..."
+    }
   }
   const tree = renderer
-    .create(<Description lists={lists}/>)
+    .create(<Description selectedBook={lists}/>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

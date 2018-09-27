@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  className="App-description"
+>
   <h2>
-    Selected Book: 
-    Book One
+    Title: 
+  </h2>
+  <h2>
+    Synopsis: 
   </h2>
 </div>
 `;
