@@ -1,6 +1,6 @@
 const initialState = {
   "To-read": [],
-  Reading: { },
+  Reading: undefined,
   "Finished-reading": []
 };
 

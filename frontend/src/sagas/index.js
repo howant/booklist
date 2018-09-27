@@ -10,8 +10,11 @@ function* watchRequestBooks() {
   yield takeEvery("REQUEST_BOOKS", requestBooklist);
 }
 
+const delay = (ms) => new Promise(res => setTimeout(res, ms))
+
 function* requestBooklist() {
   try {
+    yield delay(2000);
     const response = yield call(fetch, 'https://my-json-server.typicode.com/howant/booklist/db');
     const responseBody = yield response.json();
     console.log(responseBody);
