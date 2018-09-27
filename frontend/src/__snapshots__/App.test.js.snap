@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App-booklist"
+>
+  <h2>
+    To read
+  </h2>
+  <ul
+    className="Books-to-read"
+  >
+    <li>
+      Lead With Respect
+      <ul>
+        <li>
+          Michael Ballé & Freddy Ballé
+        </li>
+      </ul>
+    </li>
+    <li>
+      Star Shroud
+      <ul>
+        <li>
+          Ken Lozito
+        </li>
+      </ul>
+    </li>
+    <li>
+      The Great Gatsby
+      <ul>
+        <li>
+          F. Scott Fitzgerald
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>
+    Currently reading
+  </h2>
+  <ul
+    className="Books-reading"
+  >
+    <li>
+      Black Man
+      <ul>
+        <li>
+          Richard Morgan
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>
+    Finished reading
+  </h2>
+  <ul
+    className="Books-finished"
+  >
+    <li>
+      Dark Eden
+      <ul>
+        <li>
+          Chris Beckett
+        </li>
+      </ul>
+    </li>
+    <li>
+      A Wild Sheep Chase
+      <ul>
+        <li>
+          Haruki Murakami
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
