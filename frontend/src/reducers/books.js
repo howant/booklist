@@ -1,7 +1,8 @@
 const initialState = {
   "To-read": [],
   Reading: undefined,
-  "Finished-reading": []
+  "Finished-reading": [],
+  "Selected-book": "Book One"
 };
 
 const bookReducer = (state = initialState, action) => {

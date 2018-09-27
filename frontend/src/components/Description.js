@@ -5,7 +5,7 @@ class Description extends Component {
   render() {
     return (
       <div>
-        <h2>Description goes here</h2>
+        <h2>Selected Book: {this.props.lists["Selected-book"]}</h2>
       </div>
     );
   }
