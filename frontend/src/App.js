@@ -15,6 +15,7 @@ class App extends Component {
           </header>
           <Route exact path="/" component={Booklist} />
           <Route path="/description" component={Description} />
+          <Route path="/" component={Booklist} />
         </div>
       </Router>
     );
