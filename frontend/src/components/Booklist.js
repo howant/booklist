@@ -17,10 +17,14 @@ class Booklist extends Component {
         </ul>
         <h2>Currently reading</h2>
         <ul className="Books-reading">
-          <Book
-            Title={this.props.lists["Reading"].Title}
-            Author={this.props.lists["Reading"].Author}
-          />
+          {this.props.lists["Reading"] ? (
+            <Book
+              Title={this.props.lists["Reading"].Title}
+              Author={this.props.lists["Reading"].Author}
+            />
+          ) : (
+            <p>READ MORE MORON!</p>
+          )}
         </ul>
         <h2>Finished reading</h2>
         <ul className="Books-finished">
@@ -45,12 +49,13 @@ const Book = props => {
 };
 
 Booklist.propTypes = {
-  book: PropTypes.array
+  requestBooks: PropTypes.func.isRequired,
+  lists: PropTypes.object.isRequired
 };
 
 Book.propTypes = {
-  Title: PropTypes.string,
-  Author: PropTypes.string
+  Title: PropTypes.string.isRequired,
+  Author: PropTypes.string.isRequired
 };
 
 export default Booklist;
