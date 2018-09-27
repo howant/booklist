@@ -3,7 +3,7 @@ import Booklist from "./containers/Booklist";
 import Description from "./components/Description";
 
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -13,9 +13,11 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">My Book List</h1>
           </header>
-          <Route exact path="/" component={Booklist} />
-          <Route path="/description" component={Description} />
-          <Route path="/" component={Booklist} />
+          <Switch>
+            <Route exact path="/" component={Booklist} />
+            <Route path="/description" component={Description} />
+            <Route path="/" component={Booklist} />
+          </Switch>
         </div>
       </Router>
     );
