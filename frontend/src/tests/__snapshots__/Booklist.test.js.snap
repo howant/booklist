@@ -4,86 +4,98 @@ exports[`renders correctly 1`] = `
 <div
   className="App-booklist"
 >
-  <h2>
-    To read
-  </h2>
-  <ul
-    className="Books-to-read"
+  <div
+    className="sc-bdVaJa lpjCXg"
   >
-    <li
-      onClick={[Function]}
+    <h2>
+      To read
+    </h2>
+    <ul
+      className="Books-to-read"
     >
-      Lead With Respect
-      <ul>
-        <li>
-          Michael Ballé & Freddy Ballé
-        </li>
-      </ul>
-    </li>
-    <li
-      onClick={[Function]}
-    >
-      Star Shroud
-      <ul>
-        <li>
-          Ken Lozito
-        </li>
-      </ul>
-    </li>
-    <li
-      onClick={[Function]}
-    >
-      The Great Gatsby
-      <ul>
-        <li>
-          F. Scott Fitzgerald
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <h2>
-    Currently reading
-  </h2>
-  <ul
-    className="Books-reading"
+      <li
+        onClick={[Function]}
+      >
+        Lead With Respect
+        <ul>
+          <li>
+            Michael Ballé & Freddy Ballé
+          </li>
+        </ul>
+      </li>
+      <li
+        onClick={[Function]}
+      >
+        Star Shroud
+        <ul>
+          <li>
+            Ken Lozito
+          </li>
+        </ul>
+      </li>
+      <li
+        onClick={[Function]}
+      >
+        The Great Gatsby
+        <ul>
+          <li>
+            F. Scott Fitzgerald
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-bwzfXH kCeCaZ"
   >
-    <li
-      onClick={[Function]}
+    <h2>
+      Currently reading
+    </h2>
+    <ul
+      className="Books-reading"
     >
-      Black Man
-      <ul>
-        <li>
-          Richard Morgan
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <h2>
-    Finished reading
-  </h2>
-  <ul
-    className="Books-finished"
+      <li
+        onClick={[Function]}
+      >
+        Black Man
+        <ul>
+          <li>
+            Richard Morgan
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-htpNat cyinBP"
   >
-    <li
-      onClick={[Function]}
+    <h2>
+      Finished reading
+    </h2>
+    <ul
+      className="Books-finished"
     >
-      Dark Eden
-      <ul>
-        <li>
-          Chris Beckett
-        </li>
-      </ul>
-    </li>
-    <li
-      onClick={[Function]}
-    >
-      A Wild Sheep Chase
-      <ul>
-        <li>
-          Haruki Murakami
-        </li>
-      </ul>
-    </li>
-  </ul>
+      <li
+        onClick={[Function]}
+      >
+        Dark Eden
+        <ul>
+          <li>
+            Chris Beckett
+          </li>
+        </ul>
+      </li>
+      <li
+        onClick={[Function]}
+      >
+        A Wild Sheep Chase
+        <ul>
+          <li>
+            Haruki Murakami
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
