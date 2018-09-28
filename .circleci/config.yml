@@ -27,9 +27,7 @@ jobs:
           - v1-dependencies-
 
       - run:
-        command: |
-          cd frontend
-          npm install
+          command: cd frontend && npm install
 
 
       - save_cache:
@@ -39,8 +37,6 @@ jobs:
 
       # run tests!
       - run:
-        command: |
-          cd frontend
-          npm run test
+          command: cd frontend && npm run test
 
 
