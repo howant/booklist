@@ -73,4 +73,7 @@ jobs:
       - deploy:
           name: Deploy
           command: |
+            cd frontend
+            git config --global user.email howant@theodo.co.uk
+            git config --global user.name howant
             npm run deploy
