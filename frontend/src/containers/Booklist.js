@@ -4,7 +4,8 @@ import { requestBooks, requestSelectedBook } from "../actions";
 import { push } from "connected-react-router";
 
 const mapStateToProps = state => ({
-  lists: state
+  lists: state,
+  loading: state.loading
 });
 
 const mapDispatchToProps = dispatch => ({

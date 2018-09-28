@@ -37,8 +37,12 @@ class Booklist extends Component {
   }
 
   render() {
+    console.log(this.props.loading);
     return (
       <div className="App-booklist">
+        {this.props.loading && <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+        </div>}
         <StyledBlue>
           <h2>To read</h2>
           <ul className="Books-to-read">
@@ -62,7 +66,7 @@ class Booklist extends Component {
               Author={this.props.lists["Reading"].Author}
             />
           ) : (
-            <p>READ MORE MORON!</p>
+            <p>...</p>
           )}
         </ul>
         </StyledRed>
