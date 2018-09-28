@@ -1,5 +1,19 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const StyledBlue = styled.div`
+  color: blue;
+`;
+
+const StyledRed = styled.div`
+  color: red;
+  font-style: italic
+`;
+
+const StyledGreen = styled.div`
+  color: green;
+`;
 
 class Booklist extends Component {
   constructor(props) {
@@ -25,17 +39,20 @@ class Booklist extends Component {
   render() {
     return (
       <div className="App-booklist">
-        <h2>To read</h2>
-        <ul className="Books-to-read">
-          {this.props.lists["To-read"].map(book => (
-            <Book
-              onClick={() => this.handleClick(book)}
-              key={book.Title}
-              Title={book.Title}
-              Author={book.Author}
-            />
-          ))}
-        </ul>
+        <StyledBlue>
+          <h2>To read</h2>
+          <ul className="Books-to-read">
+            {this.props.lists["To-read"].map(book => (
+              <Book
+                onClick={() => this.handleClick(book)}
+                key={book.Title}
+                Title={book.Title}
+                Author={book.Author}
+              />
+            ))}
+          </ul>
+        </StyledBlue>
+        <StyledRed>
         <h2>Currently reading</h2>
         <ul className="Books-reading">
           {this.props.lists["Reading"] ? (
@@ -48,6 +65,8 @@ class Booklist extends Component {
             <p>READ MORE MORON!</p>
           )}
         </ul>
+        </StyledRed>
+        <StyledGreen>
         <h2>Finished reading</h2>
         <ul className="Books-finished">
           {this.props.lists["Finished-reading"].map(book => (
@@ -59,6 +78,7 @@ class Booklist extends Component {
             />
           ))}
         </ul>
+        </StyledGreen>
       </div>
     );
   }

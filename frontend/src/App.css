@@ -13,7 +13,8 @@
   font-size: 1.5em;
 }
 
-.App-booklist .App-description{
+.App-booklist,
+.App-description{
   padding-left: 20px;
 }
 
