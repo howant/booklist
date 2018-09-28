@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Booklist from "./containers/Booklist";
 import Description from "./containers/Description";
 import "./App.css";
-import { BrowserRouter as Route, Switch, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 
 const PREFIX_PATH='/booklist';
 
