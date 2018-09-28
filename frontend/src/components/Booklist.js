@@ -10,12 +10,12 @@ class Booklist extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(bookTitle) {
-    console.log(`clicked ${bookTitle}`);
+  handleClick(book) {
+    console.log(`clicked ${book.Title}`);
     this.setState({
-      selectedBook: bookTitle
+      selectedBook: book
     });
-    this.props.requestSelectedBook();
+    this.props.requestSelectedBook(book);
   }
 
   componentDidMount() {

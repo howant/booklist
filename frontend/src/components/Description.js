@@ -5,8 +5,8 @@ class Description extends Component {
   render() {
     return (
       <div className="App-description">
-        <h2>Title: {this.props.selectedBook.title}</h2>
-        <h2>Synopsis: {this.props.selectedBook.synopsis}</h2>
+        <h2>Title: {this.props.selectedBook.Title}</h2>
+        <h2>Synopsis: {this.props.selectedBook.Synopsis}</h2>
       </div>
     );
   }
@@ -14,8 +14,8 @@ class Description extends Component {
 
 Description.propTypes = {
   selectedBook: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    synopsis: PropTypes.string.isRequired
+    Title: PropTypes.string.isRequired,
+    Synopsis: PropTypes.string.isRequired
   }).isRequired
 };
 

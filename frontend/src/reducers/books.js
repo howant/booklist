@@ -3,8 +3,8 @@ const initialState = {
   Reading: undefined,
   "Finished-reading": [],
   selectedBook: {
-    title: "Book One",
-    synopsis: "synopsis goes here..."
+    Title: "Book One",
+    Synopsis: "synopsis goes here..."
   }
 };
 
@@ -13,7 +13,13 @@ const bookReducer = (state = initialState, action) => {
     case "REQUEST_BOOKS":
       return state;
     case "BOOK_SUCCESS":
-      return action.books;
+      // console.log(action.books);
+      return {
+        ...state,
+        "To-read": action.books["To-read"],
+        Reading: action.books.Reading,
+        "Finished-reading": action.books["Finished-reading"]
+      };
     case "REQUEST_SELECTED_BOOK":
       return {
         ...state,

@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Booklist from "../components/Booklist";
 import { requestBooks, requestSelectedBook } from "../actions";
+import { push } from "connected-react-router";
 
 const mapStateToProps = state => ({
   lists: state
@@ -9,8 +10,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   requestBooks: books => dispatch(requestBooks(books)),
   requestSelectedBook: bookTitle => {
-    dispatch(requestSelectedBook(bookTitle))
-    // push('/booklist/description');
+    dispatch(requestSelectedBook(bookTitle));
+    dispatch(push('/booklist/description'));
   }
 });
 
