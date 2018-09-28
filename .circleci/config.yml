@@ -26,7 +26,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+    working_directory: ~
 
     steps:
       - checkout
@@ -40,7 +40,7 @@ jobs:
             npm install
       - save_cache:
           paths:
-            - node_modules
+            - frontend/node_modules
           key: v1-dependencies-{{ checksum "frontend/package.json" }}
       - run:
           command: |
@@ -52,7 +52,7 @@ jobs:
     #     - gh-pages
     docker:
       - image: circleci/node:7.10
-    working_directory: ~/repo
+    working_directory: ~
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
@@ -68,9 +68,10 @@ jobs:
             npm install
       - save_cache:
           paths:
-            - node_modules
+            - frontend/node_modules
           key: v1-dependencies-{{ checksum "frontend/package.json" }}
       - deploy:
+          name: Deploy
           command: |
             if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
               git config --global user.email $GH_EMAIL
