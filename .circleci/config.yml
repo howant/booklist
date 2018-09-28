@@ -54,6 +54,8 @@ jobs:
             cd frontend
             npm run test
   deploy:
+    docker:
+        - image: circleci/node:7.10
     steps:
       - checkout
       - run:
