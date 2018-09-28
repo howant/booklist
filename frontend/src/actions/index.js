@@ -7,6 +7,7 @@ export const bookSuccess = (books) => ({
   books
 })
 
-export const requestSelectedBook = () => ({
-  type: "REQUEST_SELECTED_BOOK"
+export const requestSelectedBook = (book) => ({
+  type: "REQUEST_SELECTED_BOOK",
+  book
 })

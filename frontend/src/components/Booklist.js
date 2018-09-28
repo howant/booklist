@@ -2,6 +2,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Booklist extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedBook: "None"
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(book) {
+    console.log(`clicked ${book.Title}`);
+    this.setState({
+      selectedBook: book
+    });
+    this.props.requestSelectedBook(book);
+  }
+
   componentDidMount() {
     this.props.requestBooks();
   }
@@ -12,13 +28,19 @@ class Booklist extends Component {
         <h2>To read</h2>
         <ul className="Books-to-read">
           {this.props.lists["To-read"].map(book => (
-            <Book key={book.Title} Title={book.Title} Author={book.Author} />
+            <Book
+              onClick={() => this.handleClick(book)}
+              key={book.Title}
+              Title={book.Title}
+              Author={book.Author}
+            />
           ))}
         </ul>
         <h2>Currently reading</h2>
         <ul className="Books-reading">
           {this.props.lists["Reading"] ? (
             <Book
+              onClick={() => this.handleClick(this.props.lists["Reading"])}
               Title={this.props.lists["Reading"].Title}
               Author={this.props.lists["Reading"].Author}
             />
@@ -29,7 +51,12 @@ class Booklist extends Component {
         <h2>Finished reading</h2>
         <ul className="Books-finished">
           {this.props.lists["Finished-reading"].map(book => (
-            <Book key={book.Title} Title={book.Title} Author={book.Author} />
+            <Book
+              onClick={() => this.handleClick(book)}
+              key={book.Title}
+              Title={book.Title}
+              Author={book.Author}
+            />
           ))}
         </ul>
       </div>
@@ -39,7 +66,7 @@ class Booklist extends Component {
 
 const Book = props => {
   return (
-    <li>
+    <li onClick={props.onClick}>
       {props.Title}
       <ul>
         <li>{props.Author}</li>
