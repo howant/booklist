@@ -54,9 +54,9 @@ jobs:
             cd frontend
             npm run test
   deploy:
-    branches:
-      ignore:
-        - gh-pages
+    # branches:
+    #   ignore:
+    #     - gh-pages
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
