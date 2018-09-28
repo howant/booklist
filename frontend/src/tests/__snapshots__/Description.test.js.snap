@@ -6,11 +6,9 @@ exports[`renders correctly 1`] = `
 >
   <h2>
     Title: 
-    Book One
   </h2>
   <h2>
     Synopsis: 
-    synopsis goes here...
   </h2>
 </div>
 `;

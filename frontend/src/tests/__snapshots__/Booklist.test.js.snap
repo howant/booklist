@@ -10,7 +10,9 @@ exports[`renders correctly 1`] = `
   <ul
     className="Books-to-read"
   >
-    <li>
+    <li
+      onClick={[Function]}
+    >
       Lead With Respect
       <ul>
         <li>
@@ -18,7 +20,9 @@ exports[`renders correctly 1`] = `
         </li>
       </ul>
     </li>
-    <li>
+    <li
+      onClick={[Function]}
+    >
       Star Shroud
       <ul>
         <li>
@@ -26,7 +30,9 @@ exports[`renders correctly 1`] = `
         </li>
       </ul>
     </li>
-    <li>
+    <li
+      onClick={[Function]}
+    >
       The Great Gatsby
       <ul>
         <li>
@@ -41,7 +47,9 @@ exports[`renders correctly 1`] = `
   <ul
     className="Books-reading"
   >
-    <li>
+    <li
+      onClick={[Function]}
+    >
       Black Man
       <ul>
         <li>
@@ -56,7 +64,9 @@ exports[`renders correctly 1`] = `
   <ul
     className="Books-finished"
   >
-    <li>
+    <li
+      onClick={[Function]}
+    >
       Dark Eden
       <ul>
         <li>
@@ -64,7 +74,9 @@ exports[`renders correctly 1`] = `
         </li>
       </ul>
     </li>
-    <li>
+    <li
+      onClick={[Function]}
+    >
       A Wild Sheep Chase
       <ul>
         <li>
