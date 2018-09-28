@@ -30,18 +30,18 @@ jobs:
 
     steps:
       - checkout
-      # - restore_cache:
-      #     keys:
-      #     - v1-dependencies-{{ checksum "frontend/package.json" }}
-      #     - v1-dependencies-
-      # - run:
-      #     command: |
-      #       cd frontend
-      #       npm install
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: v1-dependencies-{{ checksum "frontend/package.json" }}
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "frontend/package.json" }}
+          - v1-dependencies-
+      - run:
+          command: |
+            cd frontend
+            npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "frontend/package.json" }}
       - run:
           command: |
             cd frontend
@@ -58,18 +58,18 @@ jobs:
       - TARGET_BRANCH: gh-pages
     steps:
       - checkout
-      # - restore_cache:
-      #     keys:
-      #     - v1-dependencies-{{ checksum "frontend/package.json" }}
-      #     - v1-dependencies-
-      # - run:
-      #     command: |
-      #       cd frontend
-      #       npm install
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: v1-dependencies-{{ checksum "frontend/package.json" }}
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "frontend/package.json" }}
+          - v1-dependencies-
+      - run:
+          command: |
+            cd frontend
+            npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "frontend/package.json" }}
       - deploy:
           command: |
             if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
