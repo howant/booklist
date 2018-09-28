@@ -14,6 +14,11 @@ const bookReducer = (state = initialState, action) => {
       return state;
     case "BOOK_SUCCESS":
       return action.books;
+    case "REQUEST_SELECTED_BOOK":
+      return {
+        ...state,
+        selectedBook: action.book
+      };
     default:
       return state;
   }
