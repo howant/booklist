@@ -41,7 +41,7 @@ class Booklist extends Component {
     return (
       <div className="App-booklist">
         {this.props.loading && <div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="spinner.gif"/>
         </div>}
         <StyledBlue>
           <h2>To read</h2>
