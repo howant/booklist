@@ -1,6 +1,5 @@
 import { takeEvery, all, call, put } from "redux-saga/effects";
 import { bookSuccess } from "../actions";
-import {push} from "connected-react-router";
 
 export default function* rootSaga() {
   yield all([watchRequestBooks(), watchSelectedBook()]);
@@ -31,5 +30,5 @@ function* requestBooklist() {
 
 function* requestBookDescription() {
   console.log("Requesting book description...");
-  // yield put(push("/booklist/description"));
+  yield;
 }
